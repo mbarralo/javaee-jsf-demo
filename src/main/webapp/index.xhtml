@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html"
+                template="/WEB-INF/templates/default.xhtml">
+    <ui:define name="content">
+
+        <div class="page-header">
+            <h1>Welcome to Sample App!</h1>
+        </div>
+
+        <p class="lead">This is a sample page just to kickstart some demo.</p>
+
+        <h2>Members</h2>
+        <h:panelGroup rendered="#{empty memberController.members}">
+            <em>No members available.</em>
+        </h:panelGroup>
+        <h:dataTable var="_member" value="#{memberController.members}"
+                     rendered="#{not empty memberController.members}"
+                     styleClass="table table-striped">
+            <h:column>
+                <f:facet name="header">Id</f:facet>
+                #{_member.id}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Name</f:facet>
+                #{_member.name}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Email</f:facet>
+                #{_member.email}
+            </h:column>
+            <h:column>
+                <f:facet name="header">Phone #</f:facet>
+                #{_member.phoneNumber}
+            </h:column>
+            <f:facet name="footer">
+
+            </f:facet>
+        </h:dataTable>
+    </ui:define>
+</ui:composition>
