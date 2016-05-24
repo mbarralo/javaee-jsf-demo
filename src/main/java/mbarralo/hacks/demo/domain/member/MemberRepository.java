@@ -1,4 +1,4 @@
-package mbarralo.hacks.demo.domain;
+package mbarralo.hacks.demo.domain.member;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;

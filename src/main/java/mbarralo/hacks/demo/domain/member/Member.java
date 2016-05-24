@@ -1,4 +1,4 @@
-package mbarralo.hacks.demo.domain;
+package mbarralo.hacks.demo.domain.member;
 
 import javax.persistence.*;
 import javax.validation.constraints.Digits;
