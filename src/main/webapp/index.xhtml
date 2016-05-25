@@ -13,11 +13,11 @@
         <p class="lead">This is a sample page just to kickstart some demo.</p>
 
         <h2>Members</h2>
-        <h:panelGroup rendered="#{empty memberController.members}">
+        <h:panelGroup rendered="#{empty members.members}">
             <em>No members available.</em>
         </h:panelGroup>
-        <h:dataTable var="_member" value="#{memberController.members}"
-                     rendered="#{not empty memberController.members}"
+        <h:dataTable var="_member" value="#{members.members}"
+                     rendered="#{not empty members.members}"
                      styleClass="table table-striped">
             <h:column>
                 <f:facet name="header">Id</f:facet>
